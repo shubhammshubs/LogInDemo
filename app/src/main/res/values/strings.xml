@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LogInDemo</string>
+    <string name="login">login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="Login">Login</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click To Login</string>
+    <string name="click_to_register">click_to_Register</string>
+    <string name="email_not_verified">Email not Verified</string>
+    <string name="verify_now">Verify Now</string>
+    <string name="logout">Logout</string>
+</resources>
