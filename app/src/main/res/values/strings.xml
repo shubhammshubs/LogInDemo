@@ -10,4 +10,5 @@
     <string name="email_not_verified">Email not Verified</string>
     <string name="verify_now">Verify Now</string>
     <string name="logout">Logout</string>
+    <string name="forgot_password">Forgot Password</string>
 </resources>

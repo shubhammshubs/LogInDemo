@@ -90,10 +90,18 @@ public class Register extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
 
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Account Created", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), Login.class);
-                                    startActivity(intent);
-                                    finish();
+                                    mAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()){
+                                                Toast.makeText(Register.this, "User Register Succesfully.Please Verify your email id . ", Toast.LENGTH_SHORT).show();
+                                                editTextEmail.setText("");
+                                                editTextPassword.setText("");
+
+                                            }else {
+                                                Toast.makeText(Register.this, "Failed to Register", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
 
                                 } else {
                                     // If sign in fails, display a message to the user.
